@@ -214,4 +214,4 @@ hydra -l <user> -P /usr/share/wordlists/rockyou.txt <IP> ssh
 
 
 ## Skills
-See: ~/THM/.opencode/skills/
+See: ~/Cybersecurity/THM/.opencode/skills/
