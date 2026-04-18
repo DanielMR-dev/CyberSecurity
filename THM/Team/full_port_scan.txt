@@ -1,0 +1,1 @@
+# Nmap 7.99 scan initiated Thu Apr 16 22:45:26 2026 as: /usr/lib/nmap/nmap --privileged -p- -T4 -oN /home/kali/THM/Team/full_port_scan.txt 10.65.164.232

@@ -1,0 +1,9 @@
+# Nmap 7.99 scan initiated Thu Apr 16 14:28:46 2026 as: /usr/lib/nmap/nmap --privileged -p80 --script=http-enum,http-title -oN /home/kali/THM/Team/http_enum.txt 10.66.163.161
+Nmap scan report for 10.66.163.161 (10.66.163.161)
+Host is up (0.085s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+|_http-title: Apache2 Ubuntu Default Page: It works! If you see this add 'te...
+
+# Nmap done at Thu Apr 16 14:29:00 2026 -- 1 IP address (1 host up) scanned in 14.10 seconds

@@ -1,0 +1,1 @@
+# Hydra v9.6 run at 2026-04-16 14:44:47 on 10.66.163.161 ftp (hydra -l dale -P /usr/share/wordlists/rockyou.txt -t 4 -o /home/kali/THM/Team/hydra_result.txt 10.66.163.161 ftp)

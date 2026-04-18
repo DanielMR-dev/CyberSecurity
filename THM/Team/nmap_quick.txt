@@ -1,0 +1,10 @@
+# Nmap 7.99 scan initiated Thu Apr 16 14:10:23 2026 as: /usr/lib/nmap/nmap --privileged -Pn -p21,22,80 -oN /home/kali/THM/Team/nmap_quick.txt 10.67.158.33
+Nmap scan report for 10.67.158.33 (10.67.158.33)
+Host is up.
+
+PORT   STATE    SERVICE
+21/tcp filtered ftp
+22/tcp filtered ssh
+80/tcp filtered http
+
+# Nmap done at Thu Apr 16 14:10:26 2026 -- 1 IP address (1 host up) scanned in 3.12 seconds

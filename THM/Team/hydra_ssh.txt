@@ -1,0 +1,1 @@
+# Hydra v9.6 run at 2026-04-16 14:29:37 on 10.66.163.161 ssh (hydra -l admin -P /usr/share/wordlists/rockyou.txt -t 4 -o /home/kali/THM/Team/hydra_ssh.txt 10.66.163.161 ssh)

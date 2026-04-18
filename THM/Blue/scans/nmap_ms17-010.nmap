@@ -1,0 +1,24 @@
+# Nmap 7.98 scan initiated Tue Mar 31 19:38:54 2026 as: /usr/lib/nmap/nmap --script smb-vuln-ms17-010 -p445 -oN /home/kali/THM/Blue/scans/nmap_ms17-010.nmap 10.65.163.160
+Nmap scan report for 10.65.163.160 (10.65.163.160)
+Host is up (0.083s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+
+Host script results:
+| smb-vuln-ms17-010: 
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|           
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|_      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+
+# Nmap done at Tue Mar 31 19:38:55 2026 -- 1 IP address (1 host up) scanned in 1.12 seconds

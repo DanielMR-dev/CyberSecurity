@@ -1,0 +1,8 @@
+# Nmap 7.99 scan initiated Thu Apr 16 14:29:24 2026 as: /usr/lib/nmap/nmap --privileged -p80 --script=http-backup-finder,http-robots.txt -oN /home/kali/THM/Team/http_backups.txt 10.66.163.161
+Nmap scan report for 10.66.163.161 (10.66.163.161)
+Host is up (0.081s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+
+# Nmap done at Thu Apr 16 14:29:25 2026 -- 1 IP address (1 host up) scanned in 1.47 seconds

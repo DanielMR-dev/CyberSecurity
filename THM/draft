@@ -1,0 +1,8 @@
+Create 6 specialized pentesting agents for TryHackMe and HackTheBox in ~/THM/.opencode/agents Each agent must have proper frontmatter with name and description fields using Markdown.
+1. recon.md — Reconnaissance and OSINT specialist. Subdomain enumeration, DNS, WHOIS, theHarvester, subfinder, amass. Triggers on: recon, OSINT, subdomains, DNS, information gathering.
+2. scanner.md — Port scanning specialist. Nmap fast/full/UDP scans, vuln scripts, service detection. Always runs: initial scan → full port scan → UDP → targeted scripts. Triggers on: nmap, port scan, open ports, scanning.
+3. web.md — Web enumeration specialist. Directory brute-force with gobuster/feroxbuster, vhost fuzzing with ffuf, CMS detection, nikto, manual checks (robots.txt, .env, source code, cookies, headers). Triggers on: gobuster, ffuf, nikto, web app, HTTP, directories.
+4. exploit.md — Exploitation specialist. searchsploit, Metasploit, reverse shells (bash, python3, php, powershell), shell stabilization with python3 pty. Always sets up listener before payload. Triggers on: exploit, CVE, searchsploit, metasploit, reverse shell, payload.
+5. privesc.md — Privilege escalation specialist for Linux and Windows. Linux: linpeas, sudo -l, SUID, cron, capabilities, GTFOBins. Windows: winPEAS, PowerUp, whoami /priv, scheduled tasks. Triggers on: privesc, root, SYSTEM, sudo, SUID, linpeas, winpeas, GTFOBins.
+6. cracker.md — Hash cracking and credential specialist. hash-identifier, john (raw-md5, ntlm, zip, ssh keys), hashcat (modes 0/100/1000/1800/3200), hydra for SSH/HTTP/FTP/SMB. Triggers on: hash, john, hashcat, hydra, crack, brute force, credentials.
+All agents must document findings in the room's report txt file and follow PTES methodology.

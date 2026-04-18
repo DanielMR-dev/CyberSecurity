@@ -1,0 +1,113 @@
+============================================================
+  PENTEST REPORT - TryHackMe
+  Room: The-Game
+  Target: Tetrix.exe (Malware/RE Challenge)
+  Date: 2026-04-16
+  Analyst: Pentester
+============================================================
+
+[PHASE 1 - RECONNAISSANCE]
+- File: Tetrix.exe (93MB zip, 88MB extracted)
+- Source: Downloaded from TryHackMe room "The-Game"
+- Hash: 64ba9f8a44b6d28026117497eedac76bf30189a09b5d8b7decf47fbd353ec96f
+- Type: PE32+ executable for MS Windows (GUI), x86-64 (stripped to external PDB)
+- Platform: TryHackMe - Malware Analysis / Reverse Engineering Room
+
+[PHASE 2 - INITIAL ANALYSIS]
+Step 1: Examined file type
+  Command: file extracted/Tetrix.exe
+  Result: PE32+ executable for MS Windows, confirmed as Windows executable
+
+Step 2: Extracted strings for initial reconnaissance
+  Command: strings extracted/Tetrix.exe | head -100
+  Findings:
+    - References to "Tetrim" (game name)
+    - Game assets (blocks I, J, L, O, S, T, Z)
+    - "CreditScreen", "Game", "SettingsScreen"
+    - Godot Engine strings detected
+    - Window management functions
+    - Crypto/SSL certificate references
+
+Step 3: Searched for interesting strings
+  Command: strings extracted/Tetrix.exe | grep -iE "(http|ftp|flag|pwd|pass|key|cert|config)"
+  Findings:
+    - https://godotengine.org (engine used)
+    - CryptoKey, X509Certificate references
+    - ConfigFile references
+    - HKEY_LOCAL_MACHINE registry paths
+
+[PHASE 3 - DEEPER ANALYSIS]
+Step 4: Identified game engine
+  Evidence from strings:
+    - "application/config/name" = "Tetrim"
+    - "A Tetris clone with a relaxing color palette"
+    - Godot Engine 4.x detected (GDPC magic bytes found)
+    - Resource paths: res://Game.tscn, res://blocks/, res://assets/
+
+Step 5: Binwalk analysis
+  Command: binwalk extracted/Tetrix.exe
+  Findings:
+    - Multiple ESP32 firmware images embedded (decoy/junk data)
+    - bix headers with invalid dates (2008, 2090, 1972)
+    - This is common in packed/obfuscated malware
+
+Step 6: Looked for Godot .pck files
+  Command: grep -aob "GDPC" extracted/Tetrix.exe
+  Results:
+    - Found GDPC magic bytes at offset 46318144
+    - Attempted extraction of pack file
+    - Extracted data was code/registers, not the game resources
+
+Step 7: Searched for embedded ZIP files
+  Command: grep -aob "PK" extracted/Tetrix.exe
+  Findings:
+    - Multiple PK signatures found (embedded files)
+    - Examined each - all were code fragments, not actual archives
+
+[PHASE 4 - FLAG DISCOVERY]
+Step 8: Direct pattern search for flag
+  Command: python3 -c "
+import struct, re
+data = open('extracted/Tetrix.exe', 'rb').read()
+matches = list(re.finditer(b'THM{', data))
+for m in matches:
+    offset = m.start()
+    context = data[offset:offset+50]
+    print(f'Offset {offset}: {context[:50]}')
+  "
+  
+  *** SUCCESS ***
+  Offset: 93001116
+  Flag: THM{I_CAN_READ_IT_ALL}
+
+[PHASE 5 - ANALYSIS SUMMARY]
+The flag was found at the very end of the executable file (near EOF at byte 93001116).
+The flag was stored in plaintext with no obfuscation or encryption.
+This is a common CTF/pentesting challenge pattern - embedding flags in unused
+portions of executable files.
+
+Tools used:
+- file: Determine file type
+- strings: Extract ASCII strings from binary
+- binwalk: Analyze embedded files/signatures
+- grep/xxd: Hex analysis
+- python3: Pattern matching for flag search
+
+[VULNERABILITIES IDENTIFIED]
+Type: Information Disclosure
+Severity: N/A (Challenge/Riddle)
+Description: Flag stored in plaintext within executable
+
+[FLAGS]
+User flag: THM{I_CAN_READ_IT_ALL}
+
+[LESSONS LEARNED]
+1. Godot Engine 4.x executables embed game resources within the binary
+2. Malware often contains decoy data (ESP32 firmware, fake archives)
+3. Flags can be hidden anywhere - including near EOF of files
+4. String extraction is a quick first-pass analysis technique
+5. Pattern matching for flag formats (THM{, HTB{, etc.) is effective
+6. PE executables can be very large when embedding game engines
+7. GDPC magic bytes indicate Godot 4.x resource files
+
+============================================================

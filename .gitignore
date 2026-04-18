@@ -1,0 +1,70 @@
+# ========================
+# DATOS SENSIBLES
+# ========================
+*.key
+*.pem
+*.token
+*.secret
+*.env
+.env*
+secrets/
+loot/
+creds/
+credentials.txt
+passwords.txt
+*_id_rsa
+config.json
+
+# ========================
+# IPs / TARGETS PERSONALES
+# ========================
+targets.txt
+scope.txt
+*.rc          # Metasploit resource scripts con IPs hardcodeadas
+
+# ========================
+# OUTPUTS DE HERRAMIENTAS
+# ========================
+*.pcap
+*.cap
+*.db
+*.sqlite
+
+# ========================
+# NODE / JS
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+dist/
+build/
+.cache/
+
+# ========================
+# PYTHON
+# ========================
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# ========================
+# SISTEMA OPERATIVO
+# ========================
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# ========================
+# EDITORES
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
