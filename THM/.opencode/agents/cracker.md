@@ -31,7 +31,18 @@ Keywords: hash, john, hashcat, hydra, crack, brute force, credentials
 - /usr/share/wordlists/rockyou.txt
 - /usr/share/wordlists/dirb/common.txt
 
+## Tor / Anonymization
+- Hydra brute-force attacks SHOULD be routed through Tor: `proxychains hydra ...`
+  - `proxychains hydra -l user -P wordlist.txt ssh://<target>`
+  - `proxychains hydra -L users.txt -P pass.txt <target> http-post-form "..."`
+- John/Hashcat are local and do not need Tor
+- Hash-identifier is local and does not need Tor
+- Online hash lookup services (if used): route through `proxychains curl`
+- Verify Tor: `ss -tlnp | grep 9050`
+- Note: Tor will slow down brute-force significantly — adjust timing (-t) accordingly
+  
 ## Notes
 - Document all findings in room report.txt
 - Follow PTES methodology
 - Note cracked credentials for pivot/horizontal movement
+- External attacks through Tor; local cracking is direct
