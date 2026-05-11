@@ -28,7 +28,20 @@ Keywords: gobuster, ffuf, nikto, web app, HTTP, directories
 - Nikto: `nikto -h <url>`
 - Whatweb: `whatweb <url>`
 
+## Tor / Anonymization
+- ALL HTTP/HTTPS tools MUST be routed through Tor via `proxychains`
+- Directory brute-force: `proxychains gobuster dir -u <url> -w <wordlist>`
+- Feroxbuster: `proxychains feroxbuster -u <url> -w <wordlist>`
+- FFUF: `proxychains ffuf -w <wordlist> -u <url> -H "Host: FUZZ.<domain>"`
+- Nikto: `proxychains nikto -h <url>`
+- WhatWeb: `proxychains whatweb <url>`
+- WPScan: `proxychains wpscan --url <url>`
+- Curl: `proxychains curl -sk <url>` or `curl --socks5-hostname 127.0.0.1:9050 -sk <url>`
+- Verify Tor: `ss -tlnp | grep 9050` before any scan
+- Verify exit node: `proxychains curl -sk https://check.torproject.org/api/ip`
+
 ## Notes
 - Document all findings in room report.txt
 - Follow PTES methodology
 - Check for interesting directories and files
+- All scans through Tor — slower but anonymous
