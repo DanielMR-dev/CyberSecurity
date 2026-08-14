@@ -13,7 +13,8 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 │   │   ├── Level-01/           # Level 1 → 2 (Name Game)
 │   │   ├── Level-02/           # Level 2 → 3 (In The Shadows)
 │   │   ├── Level-03/           # Level 3 → 4 (Access Denied)
-│   │   └── Level-04/           # Level 4 → 5 (Signal in the Noise)
+│   │   ├── Level-04/           # Level 4 → 5 (Signal in the Noise)
+│   │   └── Level-05/           # Level 5 → 6 (The Listener)
 │   └── PHANTOM/                # Phantom Track
 └── THM/                        # TryHackMe challenges
     ├── AGENTS.md               # OpenCode agents configuration
@@ -49,6 +50,7 @@ This repository follows the PTES (Penetration Testing Execution Standard) method
 | [**Ghost - Level 02**](./BreachLab/GHOST/Level-02/) | BreachLab | Linux Wargame | Hidden Files, Directories (`ls -la`) & Dotfile Traversal | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-02/writeup.md) |
 | [**Ghost - Level 03**](./BreachLab/GHOST/Level-03/) | BreachLab | Linux Wargame | Linux Group Permissions & Access Control Lists | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-03/writeup.md) |
 | [**Ghost - Level 04**](./BreachLab/GHOST/Level-04/) | BreachLab | Linux Wargame | Log Filtering, Anomaly Detection & Text Processing (`grep`) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-04/writeup.md) |
+| [**Ghost - Level 05**](./BreachLab/GHOST/Level-05/) | BreachLab | Linux Wargame | Local TCP Port Scanning & Netcat Service Handshake | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-05/writeup.md) |
 | [**Blue**](./THM/Blue/) | TryHackMe | Windows 7 SP1 | MS17-010 (EternalBlue) & SAM Cracking | `🟢 Completed` | [writeup.md](./THM/Blue/writeup.md) |
 | [**Team**](./THM/Team/) | TryHackMe | Linux (Ubuntu) | LFI / VHost / Sudo & Writable Cron Privesc | `🟢 Completed` | [writeup.md](./THM/Team/writeup.md) |
 | [**The-Game**](./THM/The-Game/) | TryHackMe | Binary (Godot) | Malware Analysis / RE / Plaintext Flag | `🟢 Completed` | [writeup.md](./THM/The-Game/writeup.md) |
