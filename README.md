@@ -10,7 +10,8 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 ├── BreachLab/                  # BreachLab wargames
 │   ├── GHOST/                  # Ghost Track
 │   │   ├── Level-00/           # Level 0 → 1 (First Contact)
-│   │   └── Level-01/           # Level 1 → 2 (Name Game)
+│   │   ├── Level-01/           # Level 1 → 2 (Name Game)
+│   │   └── Level-02/           # Level 2 → 3 (In The Shadows)
 │   └── PHANTOM/                # Phantom Track
 └── THM/                        # TryHackMe challenges
     ├── AGENTS.md               # OpenCode agents configuration
@@ -43,6 +44,7 @@ This repository follows the PTES (Penetration Testing Execution Standard) method
 | :--- | :---: | :---: | :--- | :---: | :--- |
 | [**Ghost - Level 00**](./BreachLab/GHOST/Level-00/) | BreachLab | Linux Wargame | Linux CLI Basics (`ls`, `cat`, `cd`) & Artifact Discovery | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-00/writeup.md) |
 | [**Ghost - Level 01**](./BreachLab/GHOST/Level-01/) | BreachLab | Linux Wargame | Shell Quoting, Escaping & Tricky Filenames | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-01/writeup.md) |
+| [**Ghost - Level 02**](./BreachLab/GHOST/Level-02/) | BreachLab | Linux Wargame | Hidden Files, Directories (`ls -la`) & Dotfile Traversal | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-02/writeup.md) |
 | [**Blue**](./THM/Blue/) | TryHackMe | Windows 7 SP1 | MS17-010 (EternalBlue) & SAM Cracking | `🟢 Completed` | [writeup.md](./THM/Blue/writeup.md) |
 | [**Team**](./THM/Team/) | TryHackMe | Linux (Ubuntu) | LFI / VHost / Sudo & Writable Cron Privesc | `🟢 Completed` | [writeup.md](./THM/Team/writeup.md) |
 | [**The-Game**](./THM/The-Game/) | TryHackMe | Binary (Godot) | Malware Analysis / RE / Plaintext Flag | `🟢 Completed` | [writeup.md](./THM/The-Game/writeup.md) |
