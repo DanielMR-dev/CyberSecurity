@@ -33,7 +33,8 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 │   │   ├── Level-21/           # Level 21 → 22 (Git Archaeology)
 │   │   └── Level-22/           # Level 22 (Graduation)
 │   └── PHANTOM/                # Phantom Track
-│       └── Level-00/           # Level 0 (Recon Gateway)
+│       ├── Level-00/           # Level 0 (Recon Gateway)
+│       └── Level-01/           # Level 1 (SUID Hunter)
 └── THM/                        # TryHackMe challenges
     ├── AGENTS.md               # OpenCode agents configuration
     ├── new_room.sh             # Script to create new room directories
@@ -87,6 +88,7 @@ This repository follows the PTES (Penetration Testing Execution Standard) method
 | [**Ghost - Level 21**](./BreachLab/GHOST/Level-21/) | BreachLab | Linux Wargame | Git Archaeology & Commit Tag Forensics (`git show`) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-21/writeup.md) |
 | [**Ghost - Level 22**](./BreachLab/GHOST/Level-22/) | BreachLab | Linux Wargame | Graduation Challenge & Multi-Shard Secret Convergence | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-22/writeup.md) |
 | [**Phantom - Level 00**](./BreachLab/PHANTOM/Level-00/) | BreachLab | Linux Post-Exploitation | Initial Situational Awareness & Hidden File Discovery (`/opt/`) | `🟢 Completed` | [writeup.md](./BreachLab/PHANTOM/Level-00/writeup.md) |
+| [**Phantom - Level 01**](./BreachLab/PHANTOM/Level-01/) | BreachLab | Linux Post-Exploitation | SUID Binary Privilege Abuse (`phantom-find -exec`) & `/tmp` Migration | `🟢 Completed` | [writeup.md](./BreachLab/PHANTOM/Level-01/writeup.md) |
 | [**Blue**](./THM/Blue/) | TryHackMe | Windows 7 SP1 | MS17-010 (EternalBlue) & SAM Cracking | `🟢 Completed` | [writeup.md](./THM/Blue/writeup.md) |
 | [**Team**](./THM/Team/) | TryHackMe | Linux (Ubuntu) | LFI / VHost / Sudo & Writable Cron Privesc | `🟢 Completed` | [writeup.md](./THM/Team/writeup.md) |
 | [**The-Game**](./THM/The-Game/) | TryHackMe | Binary (Godot) | Malware Analysis / RE / Plaintext Flag | `🟢 Completed` | [writeup.md](./THM/The-Game/writeup.md) |
