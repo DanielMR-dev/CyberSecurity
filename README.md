@@ -7,14 +7,18 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 ```
 ~/CyberSecurity/
 ├── README.md                    # This file
-├── THM/                       # TryHackMe challenges
-│   ├── AGENTS.md              # OpenCode agents configuration
-│   ├── new_room.sh           # Script to create new room directories
-│   ├── Blue/                # Windows machine (EternalBlue)
-│   ├── Team/               # Linux machine (LFI + Privesc)
-│   ├── The-Game/           # Malware/RE challenge
-│   ├── W1seGuy/           # Crypto challenge
-│   └── Authentication-Bypass/
+├── BreachLab/                  # BreachLab wargames
+│   ├── GHOST/                  # Ghost Track
+│   │   └── Level-00/           # Level 0 → 1 (First Contact)
+│   └── PHANTOM/                # Phantom Track
+└── THM/                        # TryHackMe challenges
+    ├── AGENTS.md               # OpenCode agents configuration
+    ├── new_room.sh             # Script to create new room directories
+    ├── Blue/                   # Windows machine (EternalBlue)
+    ├── Team/                   # Linux machine (LFI + Privesc)
+    ├── The-Game/               # Malware/RE challenge
+    ├── W1seGuy/                # Crypto challenge
+    └── Authentication-Bypass/  # Web auth bypass
 ```
 
 ---
@@ -36,6 +40,7 @@ This repository follows the PTES (Penetration Testing Execution Standard) method
 
 | Challenge / Room | Platform | Target / OS | Focus / Vulnerability | Status | Write-up / Evidence |
 | :--- | :---: | :---: | :--- | :---: | :--- |
+| [**Ghost - Level 00**](./BreachLab/GHOST/Level-00/) | BreachLab | Linux Wargame | Linux CLI Basics (`ls`, `cat`, `cd`) & Artifact Discovery | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-00/writeup.md) |
 | [**Blue**](./THM/Blue/) | TryHackMe | Windows 7 SP1 | MS17-010 (EternalBlue) & SAM Cracking | `🟢 Completed` | [writeup.md](./THM/Blue/writeup.md) |
 | [**Team**](./THM/Team/) | TryHackMe | Linux (Ubuntu) | LFI / VHost / Sudo & Writable Cron Privesc | `🟢 Completed` | [writeup.md](./THM/Team/writeup.md) |
 | [**The-Game**](./THM/The-Game/) | TryHackMe | Binary (Godot) | Malware Analysis / RE / Plaintext Flag | `🟢 Completed` | [writeup.md](./THM/The-Game/writeup.md) |
