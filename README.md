@@ -29,7 +29,8 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 │   │   ├── Level-17/           # Level 17 → 18 (No Shell For You)
 │   │   ├── Level-18/           # Level 18 → 19 (Wrong User / SUID)
 │   │   ├── Level-19/           # Level 19 → 20 (Your First Script)
-│   │   └── Level-20/           # Level 20 → 21 (Cron Discovery)
+│   │   ├── Level-20/           # Level 20 → 21 (Cron Discovery)
+│   │   └── Level-21/           # Level 21 → 22 (Git Archaeology)
 │   └── PHANTOM/                # Phantom Track
 └── THM/                        # TryHackMe challenges
     ├── AGENTS.md               # OpenCode agents configuration
@@ -81,6 +82,7 @@ This repository follows the PTES (Penetration Testing Execution Standard) method
 | [**Ghost - Level 18**](./BreachLab/GHOST/Level-18/) | BreachLab | Linux Wargame | SUID Binary Privilege Abuse (`ghost-reader`) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-18/writeup.md) |
 | [**Ghost - Level 19**](./BreachLab/GHOST/Level-19/) | BreachLab | Linux Wargame | Automated PIN Brute-Forcing (Bash Loop + Netcat) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-19/writeup.md) |
 | [**Ghost - Level 20**](./BreachLab/GHOST/Level-20/) | BreachLab | Linux Wargame | Cron Job Discovery & Ephemeral File Polling Loop | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-20/writeup.md) |
+| [**Ghost - Level 21**](./BreachLab/GHOST/Level-21/) | BreachLab | Linux Wargame | Git Archaeology & Commit Tag Forensics (`git show`) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-21/writeup.md) |
 | [**Blue**](./THM/Blue/) | TryHackMe | Windows 7 SP1 | MS17-010 (EternalBlue) & SAM Cracking | `🟢 Completed` | [writeup.md](./THM/Blue/writeup.md) |
 | [**Team**](./THM/Team/) | TryHackMe | Linux (Ubuntu) | LFI / VHost / Sudo & Writable Cron Privesc | `🟢 Completed` | [writeup.md](./THM/Team/writeup.md) |
 | [**The-Game**](./THM/The-Game/) | TryHackMe | Binary (Godot) | Malware Analysis / RE / Plaintext Flag | `🟢 Completed` | [writeup.md](./THM/The-Game/writeup.md) |
