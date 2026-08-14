@@ -23,7 +23,8 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 │   │   ├── Level-11/           # Level 11 → 12 (Wrapped Three Deep)
 │   │   ├── Level-12/           # Level 12 → 13 (Key Not Password)
 │   │   ├── Level-13/           # Level 13 → 14 (Port 30000)
-│   │   └── Level-14/           # Level 14 → 15 (TLS, Not Plaintext)
+│   │   ├── Level-14/           # Level 14 → 15 (TLS, Not Plaintext)
+│   │   └── Level-15/           # Level 15 → 16 (Port Range)
 │   └── PHANTOM/                # Phantom Track
 └── THM/                        # TryHackMe challenges
     ├── AGENTS.md               # OpenCode agents configuration
@@ -69,6 +70,7 @@ This repository follows the PTES (Penetration Testing Execution Standard) method
 | [**Ghost - Level 12**](./BreachLab/GHOST/Level-12/) | BreachLab | Linux Wargame | SSH Private Key Authentication (`ssh -i`) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-12/writeup.md) |
 | [**Ghost - Level 13**](./BreachLab/GHOST/Level-13/) | BreachLab | Linux Wargame | Local TCP Port Communication (`nc` / Netcat) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-13/writeup.md) |
 | [**Ghost - Level 14**](./BreachLab/GHOST/Level-14/) | BreachLab | Linux Wargame | TLS Encrypted Socket Communication (`openssl s_client`) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-14/writeup.md) |
+| [**Ghost - Level 15**](./BreachLab/GHOST/Level-15/) | BreachLab | Linux Wargame | Port Range Scanning (`nmap -sV`) & TLS Service Interrogation | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-15/writeup.md) |
 | [**Blue**](./THM/Blue/) | TryHackMe | Windows 7 SP1 | MS17-010 (EternalBlue) & SAM Cracking | `🟢 Completed` | [writeup.md](./THM/Blue/writeup.md) |
 | [**Team**](./THM/Team/) | TryHackMe | Linux (Ubuntu) | LFI / VHost / Sudo & Writable Cron Privesc | `🟢 Completed` | [writeup.md](./THM/Team/writeup.md) |
 | [**The-Game**](./THM/The-Game/) | TryHackMe | Binary (Godot) | Malware Analysis / RE / Plaintext Flag | `🟢 Completed` | [writeup.md](./THM/The-Game/writeup.md) |
