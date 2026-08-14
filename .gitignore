@@ -1,5 +1,5 @@
 # ========================
-# DATOS SENSIBLES
+# SENSITIVE DATA
 # ========================
 *.key
 *.pem
@@ -16,14 +16,14 @@ passwords.txt
 config.json
 
 # ========================
-# IPs / TARGETS PERSONALES
+# TARGETS & SCOPES
 # ========================
 targets.txt
 scope.txt
-*.rc          # Metasploit resource scripts con IPs hardcodeadas
+*.rc          # Metasploit resource scripts with hardcoded IPs
 
 # ========================
-# OUTPUTS DE HERRAMIENTAS
+# TOOL OUTPUTS
 # ========================
 *.pcap
 *.cap
@@ -54,7 +54,7 @@ env/
 *.egg-info/
 
 # ========================
-# SISTEMA OPERATIVO
+# OPERATING SYSTEM
 # ========================
 .DS_Store
 Thumbs.db
@@ -62,14 +62,14 @@ desktop.ini
 *~
 
 # ========================
-# EDITORES
+# EDITORS & IDES
 # ========================
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Archivos grandes / herramientas
+# Large files / tool artifacts
 *.exe
 *.restore
 *.pcap

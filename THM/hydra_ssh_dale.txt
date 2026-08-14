@@ -1,1 +1,0 @@
-# Hydra v9.6 run at 2026-04-16 23:08:56 on 10.65.164.232 ssh (hydra -l dale -P /usr/share/wordlists/rockyou.txt -t 4 -o hydra_ssh_dale.txt 10.65.164.232 ssh)
