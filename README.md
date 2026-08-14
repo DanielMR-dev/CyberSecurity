@@ -16,7 +16,8 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 │   │   ├── Level-04/           # Level 4 → 5 (Signal in the Noise)
 │   │   ├── Level-05/           # Level 5 → 6 (The Listener)
 │   │   ├── Level-06/           # Level 6 → 7 (Ghost in the Machine)
-│   │   └── Level-07/           # Level 7 → 8 (Lost in Translation)
+│   │   ├── Level-07/           # Level 7 → 8 (Lost in Translation)
+│   │   └── Level-08/           # Level 8 → 9 (Something's Running)
 │   └── PHANTOM/                # Phantom Track
 └── THM/                        # TryHackMe challenges
     ├── AGENTS.md               # OpenCode agents configuration
@@ -55,6 +56,7 @@ This repository follows the PTES (Penetration Testing Execution Standard) method
 | [**Ghost - Level 05**](./BreachLab/GHOST/Level-05/) | BreachLab | Linux Wargame | Local TCP Port Scanning & Netcat Service Handshake | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-05/writeup.md) |
 | [**Ghost - Level 06**](./BreachLab/GHOST/Level-06/) | BreachLab | Linux Wargame | Environment Variables (`env`) & Base64 Decoding | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-06/writeup.md) |
 | [**Ghost - Level 07**](./BreachLab/GHOST/Level-07/) | BreachLab | Linux Wargame | Multi-Stage Deobfuscation (Hexdump `xxd -r` & Base64) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-07/writeup.md) |
+| [**Ghost - Level 08**](./BreachLab/GHOST/Level-08/) | BreachLab | Linux Wargame | Process Memory Forensics & `/proc/<PID>/environ` | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-08/writeup.md) |
 | [**Blue**](./THM/Blue/) | TryHackMe | Windows 7 SP1 | MS17-010 (EternalBlue) & SAM Cracking | `🟢 Completed` | [writeup.md](./THM/Blue/writeup.md) |
 | [**Team**](./THM/Team/) | TryHackMe | Linux (Ubuntu) | LFI / VHost / Sudo & Writable Cron Privesc | `🟢 Completed` | [writeup.md](./THM/Team/writeup.md) |
 | [**The-Game**](./THM/The-Game/) | TryHackMe | Binary (Godot) | Malware Analysis / RE / Plaintext Flag | `🟢 Completed` | [writeup.md](./THM/The-Game/writeup.md) |
