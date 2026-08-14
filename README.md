@@ -26,7 +26,8 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 │   │   ├── Level-14/           # Level 14 → 15 (TLS, Not Plaintext)
 │   │   ├── Level-15/           # Level 15 → 16 (Port Range)
 │   │   ├── Level-16/           # Level 16 → 17 (Diff)
-│   │   └── Level-17/           # Level 17 → 18 (No Shell For You)
+│   │   ├── Level-17/           # Level 17 → 18 (No Shell For You)
+│   │   └── Level-18/           # Level 18 → 19 (Wrong User / SUID)
 │   └── PHANTOM/                # Phantom Track
 └── THM/                        # TryHackMe challenges
     ├── AGENTS.md               # OpenCode agents configuration
@@ -75,6 +76,7 @@ This repository follows the PTES (Penetration Testing Execution Standard) method
 | [**Ghost - Level 15**](./BreachLab/GHOST/Level-15/) | BreachLab | Linux Wargame | Port Range Scanning (`nmap -sV`) & TLS Service Interrogation | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-15/writeup.md) |
 | [**Ghost - Level 16**](./BreachLab/GHOST/Level-16/) | BreachLab | Linux Wargame | Differential File Analysis (`diff`) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-16/writeup.md) |
 | [**Ghost - Level 17**](./BreachLab/GHOST/Level-17/) | BreachLab | Linux Wargame | Non-Interactive SSH Command Execution (`.force-logout` bypass) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-17/writeup.md) |
+| [**Ghost - Level 18**](./BreachLab/GHOST/Level-18/) | BreachLab | Linux Wargame | SUID Binary Privilege Abuse (`ghost-reader`) | `🟢 Completed` | [writeup.md](./BreachLab/GHOST/Level-18/writeup.md) |
 | [**Blue**](./THM/Blue/) | TryHackMe | Windows 7 SP1 | MS17-010 (EternalBlue) & SAM Cracking | `🟢 Completed` | [writeup.md](./THM/Blue/writeup.md) |
 | [**Team**](./THM/Team/) | TryHackMe | Linux (Ubuntu) | LFI / VHost / Sudo & Writable Cron Privesc | `🟢 Completed` | [writeup.md](./THM/Team/writeup.md) |
 | [**The-Game**](./THM/The-Game/) | TryHackMe | Binary (Godot) | Malware Analysis / RE / Plaintext Flag | `🟢 Completed` | [writeup.md](./THM/The-Game/writeup.md) |
