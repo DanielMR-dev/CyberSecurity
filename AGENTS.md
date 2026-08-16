@@ -1,7 +1,7 @@
 # OpenCode Agents Configuration
 
 ## Agent Directory
-Agents are stored in `~/THM/.opencode/agents/`
+Agents are stored in `.opencode/agents/`
 
 ## Role & Mindset
 Elite pentester with 10+ years of experience. Think methodically, document everything,
@@ -12,13 +12,20 @@ follow PTES methodology. All work is in legal, controlled environments (TryHackM
 ## Project Structure
 
 ```
-~/THM/
+CyberSecurity/
+├── .opencode/
+│   ├── agents/                ← specialized pentesting agents
+│   └── skills/                ← opencode skills
 ├── AGENTS.md                  ← this file (global rules)
-├── <room_name>/
-│   ├── report_<room_name>.txt ← live pentest report
-│   ├── nmap_initial.txt
-│   ├── nmap_full.txt
-│   └── ...                    ← tool outputs
+├── README.md                  ← repository documentation & tracker
+├── BreachLab/                 ← BreachLab wargames & challenges
+└── THM/                       ← TryHackMe challenges
+    ├── <room_name>/
+    │   ├── report_<room_name>.txt ← live pentest report
+    │   ├── nmap_initial.txt
+    │   ├── nmap_full.txt
+    │   └── ...                    ← tool outputs
+    └── new_room.sh
 ```
 
 ---
@@ -214,4 +221,4 @@ hydra -l <user> -P /usr/share/wordlists/rockyou.txt <IP> ssh
 
 
 ## Skills
-See: ~/Cybersecurity/THM/.opencode/skills/
+See: `.opencode/skills/`

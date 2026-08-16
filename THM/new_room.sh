@@ -31,13 +31,16 @@ Always operate in legal, controlled environments (TryHackMe, HackTheBox, CTFs).
 ## Project Structure
 
 ```
-~/THM/
-├── AGENTS.md                  ← this file (global rules)
-├── <room_name>/
-│   ├── report_<room_name>.txt ← live pentest report
-│   ├── nmap_initial.txt
-│   ├── nmap_full.txt
-│   └── ...                    ← tool outputs
+CyberSecurity/
+├── AGENTS.md                  ← global rules configuration
+├── .opencode/                 ← specialized agents & skills
+└── THM/
+    ├── <room_name>/
+    │   ├── report_<room_name>.txt ← live pentest report
+    │   ├── nmap_initial.txt
+    │   ├── nmap_full.txt
+    │   └── ...                    ← tool outputs
+    └── new_room.sh
 ```
 
 ---
@@ -241,13 +244,16 @@ echo "[+] Room '${ROOM}' created at: ${ROOM_DIR}"
 echo "[+] Generated files:"
 echo "    - report_${ROOM}.txt"
 echo ""
-echo "[*] Structure ~/THM:"
-echo "    ~/THM/"
+echo "[*] Structure:"
+echo "    CyberSecurity/"
 echo "    ├── AGENTS.md"
-echo "    ├── new_room.sh"
-echo "    ├── .skills/pentesting.md"
-echo "    └── ${ROOM}/"
-echo "        └── report_${ROOM}.txt"
+echo "    ├── .opencode/"
+echo "    │   ├── agents/"
+echo "    │   └── skills/"
+echo "    └── THM/"
+echo "        ├── new_room.sh"
+echo "        └── ${ROOM}/"
+echo "            └── report_${ROOM}.txt"
 echo ""
 echo "[*] To start:"
 echo "    cd ${ROOM_DIR} && opencode"

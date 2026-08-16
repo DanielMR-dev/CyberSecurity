@@ -1,4 +1,4 @@
-Create 6 specialized pentesting agents for TryHackMe and HackTheBox in ~/THM/.opencode/agents Each agent must have proper frontmatter with name and description fields using Markdown.
+Create 6 specialized pentesting agents for TryHackMe and HackTheBox in .opencode/agents/ Each agent must have proper frontmatter with name and description fields using Markdown.
 1. recon.md — Reconnaissance and OSINT specialist. Subdomain enumeration, DNS, WHOIS, theHarvester, subfinder, amass. Triggers on: recon, OSINT, subdomains, DNS, information gathering.
 2. scanner.md — Port scanning specialist. Nmap fast/full/UDP scans, vuln scripts, service detection. Always runs: initial scan → full port scan → UDP → targeted scripts. Triggers on: nmap, port scan, open ports, scanning.
 3. web.md — Web enumeration specialist. Directory brute-force with gobuster/feroxbuster, vhost fuzzing with ffuf, CMS detection, nikto, manual checks (robots.txt, .env, source code, cookies, headers). Triggers on: gobuster, ffuf, nikto, web app, HTTP, directories.

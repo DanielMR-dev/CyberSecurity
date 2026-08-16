@@ -7,7 +7,11 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 ```
 ~/CyberSecurity/
 ├── README.md                    # This file
-├── BreachLab/                  # BreachLab wargames
+├── AGENTS.md                    # OpenCode agents configuration
+├── .opencode/                   # OpenCode agents and skills
+│   ├── agents/                  # Specialized pentesting agents
+│   └── skills/                  # Pentesting skills definition
+├── BreachLab/                   # BreachLab wargames
 │   ├── GHOST/                  # Ghost Track
 │   │   ├── Level-00/           # Level 0 → 1 (First Contact)
 │   │   ├── Level-01/           # Level 1 → 2 (Name Game)
@@ -37,7 +41,6 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 │       ├── Level-01/           # Level 1 (SUID Hunter)
 │       └── Level-02/           # Level 2 (Sudo Games)
 └── THM/                        # TryHackMe challenges
-    ├── AGENTS.md               # OpenCode agents configuration
     ├── new_room.sh             # Script to create new room directories
     ├── Blue/                   # Windows machine (EternalBlue)
     ├── Team/                   # Linux machine (LFI + Privesc)
@@ -119,7 +122,7 @@ Creates:
 
 ## OpenCode Agents
 
-The repository includes 6 specialized pentesting agents:
+The repository includes 6 specialized pentesting agents stored in `.opencode/agents/` and configured globally via `AGENTS.md`:
 
 1. **recon.md** - OSINT/reconnaissance
 2. **scanner.md** - Port scanning (nmap)
