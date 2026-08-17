@@ -40,7 +40,8 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 │       ├── Level-00/           # Level 0 (Recon Gateway)
 │       ├── Level-01/           # Level 1 (SUID Hunter)
 │       ├── Level-02/           # Level 2 (Sudo Games)
-│       └── Level-03/           # Level 3 (Inheritance)
+│       ├── Level-03/           # Level 3 (Inheritance)
+│       └── Level-04/           # Level 4 (Misplaced Power)
 └── THM/                        # TryHackMe challenges
     ├── new_room.sh             # Script to create new room directories
     ├── Blue/                   # Windows machine (EternalBlue)
@@ -96,6 +97,7 @@ This repository follows the PTES (Penetration Testing Execution Standard) method
 | [**Phantom - Level 01**](./BreachLab/PHANTOM%20-%20LEGACY/Level-01/) | BreachLab | Linux Post-Exploitation | SUID Binary Privilege Abuse (`phantom-find -exec`) & `/tmp` Migration | `🟢 Completed` | [writeup.md](./BreachLab/PHANTOM%20-%20LEGACY/Level-01/writeup.md) |
 | [**Phantom - Level 02**](./BreachLab/PHANTOM%20-%20LEGACY/Level-02/) | BreachLab | Linux Post-Exploitation | Sudo Privileged Delegation & Vim Subshell Escape (`:!/bin/bash`) | `🟢 Completed` | [writeup.md](./BreachLab/PHANTOM%20-%20LEGACY/Level-02/writeup.md) |
 | [**Phantom - Level 03**](./BreachLab/PHANTOM%20-%20LEGACY/Level-03/) | BreachLab | Linux Post-Exploitation | Sudo Environment Inheritance (`env_keep+=LD_PRELOAD`) & Shared Object Hijacking | `🟢 Completed` | [writeup.md](./BreachLab/PHANTOM%20-%20LEGACY/Level-03/writeup.md) |
+| [**Phantom - Level 04**](./BreachLab/PHANTOM%20-%20LEGACY/Level-04/) | BreachLab | Linux Post-Exploitation | SUID Interpreter Abuse (`phantom-python3`) & Privileged Mode (`bash -p`) | `🟢 Completed` | [writeup.md](./BreachLab/PHANTOM%20-%20LEGACY/Level-04/writeup.md) |
 | [**Blue**](./THM/Blue/) | TryHackMe | Windows 7 SP1 | MS17-010 (EternalBlue) & SAM Cracking | `🟢 Completed` | [writeup.md](./THM/Blue/writeup.md) |
 | [**Team**](./THM/Team/) | TryHackMe | Linux (Ubuntu) | LFI / VHost / Sudo & Writable Cron Privesc | `🟢 Completed` | [writeup.md](./THM/Team/writeup.md) |
 | [**The-Game**](./THM/The-Game/) | TryHackMe | Binary (Godot) | Malware Analysis / RE / Plaintext Flag | `🟢 Completed` | [writeup.md](./THM/The-Game/writeup.md) |
