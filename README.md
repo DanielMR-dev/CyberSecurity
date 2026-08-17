@@ -52,7 +52,8 @@ This repository contains write-ups, scripts, and tools from practicing penetrati
 │       ├── Level-13/           # Level 13 (Deep Roots)
 │       ├── Level-14/           # Level 14 (Shadow Mode)
 │       ├── Level-15/           # Level 15 (Clean Slate)
-│       └── Level-16/           # Level 16 (The Tunnel)
+│       ├── Level-16/           # Level 16 (The Tunnel)
+│       └── Level-17/           # Level 17 (Internal Hunt)
 └── THM/                        # TryHackMe challenges
     ├── new_room.sh             # Script to create new room directories
     ├── Blue/                   # Windows machine (EternalBlue)
@@ -120,6 +121,7 @@ This repository follows the PTES (Penetration Testing Execution Standard) method
 | [**Phantom - Level 14**](./BreachLab/PHANTOM-LEGACY/Level-14/) | BreachLab | Linux Post-Exploitation | EDR & `execve` Audit Evasion via Shell Builtins (`$(< file)`) | `🟢 Completed` | [writeup.md](./BreachLab/PHANTOM-LEGACY/Level-14/writeup.md) |
 | [**Phantom - Level 15**](./BreachLab/PHANTOM-LEGACY/Level-15/) | BreachLab | Linux Post-Exploitation | Multi-Layer Anti-Forensics & Log Wiping (`wtmp`, `auth.log`, `audit.log`) | `🟢 Completed` | [writeup.md](./BreachLab/PHANTOM-LEGACY/Level-15/writeup.md) |
 | [**Phantom - Level 16**](./BreachLab/PHANTOM-LEGACY/Level-16/) | BreachLab | Linux Post-Exploitation | SSH Local Port Forwarding & Loopback Pivoting (`-L -Nf`) | `🟢 Completed` | [writeup.md](./BreachLab/PHANTOM-LEGACY/Level-16/writeup.md) |
+| [**Phantom - Level 17**](./BreachLab/PHANTOM-LEGACY/Level-17/) | BreachLab | Linux Post-Exploitation | Unauthenticated Redis Exploitation & SSH Key Injection via RDB | `🟢 Completed` | [writeup.md](./BreachLab/PHANTOM-LEGACY/Level-17/writeup.md) |
 | [**Blue**](./THM/Blue/) | TryHackMe | Windows 7 SP1 | MS17-010 (EternalBlue) & SAM Cracking | `🟢 Completed` | [writeup.md](./THM/Blue/writeup.md) |
 | [**Team**](./THM/Team/) | TryHackMe | Linux (Ubuntu) | LFI / VHost / Sudo & Writable Cron Privesc | `🟢 Completed` | [writeup.md](./THM/Team/writeup.md) |
 | [**The-Game**](./THM/The-Game/) | TryHackMe | Binary (Godot) | Malware Analysis / RE / Plaintext Flag | `🟢 Completed` | [writeup.md](./THM/The-Game/writeup.md) |
